@@ -80,7 +80,8 @@ Reconnaissance → Mapping → Analysis → Exploitation → Data Recovery → R
 `robots.txt` was checked next — and it handed over far more than expected, explicitly disallowing `/patient/`, `/staff/`, and `/old/`:
 
 <p align="center">
-  <img src="./evidence/images/02-recon-robotstxt.png" width="620" alt="robots.txt disclosing sensitive paths">
+  <img width="1261" height="181" alt="image2" src="https://github.com/user-attachments/assets/e981f38f-c23c-44e2-993e-58192e0fd2bb" />
+
 </p>
 
 This is effectively a self-authored map of the site's most sensitive areas, discovered before a single page was manually browsed. The `sitemap.xml` referenced at the bottom of `robots.txt` was checked too, but only listed the public marketing pages (`index`, `about`, `doctors`, `contact`) — confirming the sensitive paths were deliberately excluded from the "official" map rather than simply forgotten:
