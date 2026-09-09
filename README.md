@@ -11,7 +11,8 @@
 > **Note:** This is a training engagement carried out against a purpose-built lab target under NetworkWalks' Week 4 project brief, with written permission granted for testing as documented in the project scope. The techniques documented here must never be applied to any system without explicit written authorization.
 
 <p align="center">
-  <img src="./evidence/images/00-project-milestones-overview.png" width="720" alt="Project milestones overview">
+<img width="984" height="552" alt="image" src="https://github.com/user-attachments/assets/a4c05900-2353-4a2e-98a9-9181b8d02efd" />
+
 </p>
 
 ---
@@ -72,7 +73,7 @@ Reconnaissance → Mapping → Analysis → Exploitation → Data Recovery → R
 **Step 1 — Command-line reconnaissance.** Before opening a browser, `curl` was used to fingerprint the stack with minimal footprint:
 
 <p align="center">
-  <img src="./evidence/images/01-recon-curl-headers.png" width="620" alt="curl HTTP headers recon">
+  
 </p>
 
 `robots.txt` was checked next — and it handed over far more than expected, explicitly disallowing `/patient/`, `/staff/`, and `/old/`:
