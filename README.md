@@ -243,7 +243,8 @@ Not every lead paid off — and a thorough test log records the negative results
 An attempt was also made to pull `/patient/error_log` in case a stack trace or misconfigured log had leaked query details, credentials, or file paths. The request itself returned `HTTP/2 403`, and a `grep` for common sensitive keywords (`sql`, `bash`, `shell`, `password`, `error`, `warning`) against the saved response confirmed it was just the standard Forbidden page body — no log content was actually exposed:
 
 <p align="center">
- 
+ <img width="1148" height="316" alt="image" src="https://github.com/user-attachments/assets/5baad85d-b68c-4270-a228-bde867aff15d" />
+
 </p>
 
 ---
