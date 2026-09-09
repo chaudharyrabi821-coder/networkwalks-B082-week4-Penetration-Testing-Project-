@@ -236,13 +236,14 @@ Not every lead paid off — and a thorough test log records the negative results
 `/patient/reports/` (a plausible sibling of the working `/patient/portal.php` path) was probed directly, but correctly returned a **403 Forbidden** rather than any listing or data — this path is properly locked down:
 
 <p align="center">
-  <img src="./evidence/images/19-recon-patient-reports-403.png" width="620" alt="403 Forbidden response for /patient/reports/">
+<img width="1275" height="456" alt="image" src="https://github.com/user-attachments/assets/0bf8e618-b2fd-4abd-9c43-2e93945bba7e" />
+
 </p>
 
 An attempt was also made to pull `/patient/error_log` in case a stack trace or misconfigured log had leaked query details, credentials, or file paths. The request itself returned `HTTP/2 403`, and a `grep` for common sensitive keywords (`sql`, `bash`, `shell`, `password`, `error`, `warning`) against the saved response confirmed it was just the standard Forbidden page body — no log content was actually exposed:
 
 <p align="center">
-  <img src="./evidence/images/20-recon-error-log-attempt.png" width="620" alt="Attempt to fetch and grep /patient/error_log, returning only the 403 page">
+ 
 </p>
 
 ---
