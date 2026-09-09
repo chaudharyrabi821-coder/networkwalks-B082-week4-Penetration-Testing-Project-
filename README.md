@@ -205,19 +205,22 @@ Following the M3 brief to look beyond the obvious content, the `/staff/` and `/o
 The backup's own header comment flagged exactly what it contained — confidential staff and shareholder records:
 
 <p align="center">
-  <img src="./evidence/images/15-sqlbackup-staff-table-schema.png" width="620" alt="SQL backup header and staff table schema">
+<img width="1694" height="693" alt="image12 0" src="https://github.com/user-attachments/assets/37a06ab6-de7e-4ef6-b82f-ef4cfb3fad43" />
+
 </p>
 
 The dump included full staff records — names, job titles, departments, contact details, national ID numbers, and **monthly salaries** for all 30 hospital employees:
 
 <p align="center">
-  <img src="./evidence/images/16-sqlbackup-staff-table-data.png" width="620" alt="Staff table data dump including salary figures">
+<img width="1207" height="604" alt="image12 1" src="https://github.com/user-attachments/assets/cd03744b-adb1-4c06-9c4b-02571f56f4a1" />
+
 </p>
 
 ...and a separate `shareholders` table listing ownership stakes in the hospital:
 
 <p align="center">
-  <img src="./evidence/images/17-sqlbackup-shareholders-table.png" width="620" alt="Shareholders table showing ownership percentages">
+<img width="1148" height="478" alt="image12 2" src="https://github.com/user-attachments/assets/3f91a040-2f2c-4d89-bfd8-aefc9cef7bb2" />
+
 </p>
 
 This satisfies **Milestone 3**: both required data points — staff salaries and shareholder details — were fully recovered, sourced from an unauthenticated, publicly accessible backup file rather than any further exploitation of the login form.
