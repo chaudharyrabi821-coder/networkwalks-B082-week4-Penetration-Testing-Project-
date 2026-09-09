@@ -87,25 +87,29 @@ Reconnaissance → Mapping → Analysis → Exploitation → Data Recovery → R
 This is effectively a self-authored map of the site's most sensitive areas, discovered before a single page was manually browsed. The `sitemap.xml` referenced at the bottom of `robots.txt` was checked too, but only listed the public marketing pages (`index`, `about`, `doctors`, `contact`) — confirming the sensitive paths were deliberately excluded from the "official" map rather than simply forgotten:
 
 <p align="center">
-  <img src="./evidence/images/18-recon-sitemap-xml.png" width="620" alt="sitemap.xml showing only public marketing pages">
+ <img width="1148" height="316" alt="image12 3" src="https://github.com/user-attachments/assets/9a0893e8-115b-418e-be84-e4218b6cda68" />
+
 </p>
 
 **Step 2 — Browser reconnaissance.** The `/patient/login.php` path flagged by `robots.txt` was opened directly in a Burp-proxied browser:
 
 <p align="center">
-  <img src="./evidence/images/03-login-page-baseline.png" width="620" alt="Patient Portal login page baseline">
+ <img width="1623" height="738" alt="image3" src="https://github.com/user-attachments/assets/8429a3f8-d889-4582-beb2-62388d22a001" />
+
 </p>
 
 **Step 3 — Baseline login test (username enumeration found).** A plausible-but-invalid username was submitted to observe normal application behavior, producing an explicit **"Username not found"** message — a secondary finding on its own, since the application validates username existence before checking the password:
 
 <p align="center">
-  <img src="./evidence/images/04-login-username-not-found.png" width="620" alt="Username not found error message">
+<img width="1603" height="936" alt="image4" src="https://github.com/user-attachments/assets/bd5c5993-6ad2-4810-993a-862609a58f61" />
+
 </p>
 
 **Step 4 — Manual confirmation & exploitation.** A single `'` reproduced a SQL syntax anomaly, confirming unsanitized input reaching the database layer. The classic authentication-bypass payload was then submitted as the username, with any value as the password:
 
 <p align="center">
-  <img src="./evidence/images/05-login-admin-bypass-entered.png" width="620" alt="admin' -- authentication bypass payload entered">
+  <img width="1591" height="926" alt="image5" src="https://github.com/user-attachments/assets/68f45838-1116-4e8f-ad89-8a292aee351a" />
+
 </p>
 
 ```
@@ -116,7 +120,8 @@ Password: anything
 **Step 5 — Impact: unauthorized data access.** The bypass succeeded, granting access to "My Reports" — three password-protected pathology reports:
 
 <p align="center">
-  <img src="./evidence/images/06-portal-reports-list.png" width="680" alt="My lab reports page showing 3 downloadable PDFs">
+<img width="1625" height="883" alt="image6" src="https://github.com/user-attachments/assets/3d67259a-d37e-43b7-abf3-0ea97b621c79" />
+
 </p>
 
 This closes out **Milestone 1**: proof of unauthorized access, plus the 3 target PDF files.
@@ -130,7 +135,8 @@ Each of the 3 downloaded PDFs opened with a password prompt, exactly as advertis
 **`patient_report_1.pdf` — Sipho Dlamini**
 
 <p align="center">
-  <img src="./evidence/images/07-pdf1-password-prompt.png" width="340" alt="Password prompt for patient_report_1.pdf">
+ <img width="568" height="297" alt="image7 0_pdf1" src="https://github.com/user-attachments/assets/4f70d3cb-f4a1-42a1-8f1d-e668f6d4c602" />
+
 </p>
 
 A hash was extracted locally and run through a dictionary attack — cracked on the first attempt: **`123456`**.
