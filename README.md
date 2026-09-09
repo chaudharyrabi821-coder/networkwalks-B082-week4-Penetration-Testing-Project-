@@ -142,31 +142,36 @@ Each of the 3 downloaded PDFs opened with a password prompt, exactly as advertis
 A hash was extracted locally and run through a dictionary attack — cracked on the first attempt: **`123456`**.
 
 <p align="center">
-  <img src="./evidence/images/08-pdf1-report-dlamini.png" width="420" alt="Decrypted pathology report for Sipho Dlamini">
+<img width="508" height="725" alt="image" src="https://github.com/user-attachments/assets/bda8f76d-2304-4fa6-b77b-a7e8c8e3f57b" />
+
 </p>
 
 **`patient_report_2.pdf` — Priya Reddy**
 
 <p align="center">
-  <img src="./evidence/images/09-pdf2-password-prompt.png" width="340" alt="Password prompt for patient_report_2.pdf">
+<img width="576" height="303" alt="image8 0_pdf2" src="https://github.com/user-attachments/assets/5efa3816-45ae-483e-b33d-adf0fd547f8a" />
+
 </p>
 
 Cracked on the second attempt against the same built-in wordlist: **`password`**.
 
 <p align="center">
-  <img src="./evidence/images/10-pdf2-report-reddy.png" width="420" alt="Decrypted pathology report for Priya Reddy">
+<img width="484" height="682" alt="image8 3_pdf2" src="https://github.com/user-attachments/assets/2bae0531-15b5-4c76-8302-e60beca52366" />
+
 </p>
 
 **`patient_report_3.pdf` — Emily Thompson**
 
 <p align="center">
-  <img src="./evidence/images/11-pdf3-password-prompt.png" width="340" alt="Password prompt for patient_report_3.pdf">
+<img width="588" height="299" alt="image9 0_pdf3" src="https://github.com/user-attachments/assets/3c7c623c-ad1f-45de-b3db-51c76d9ba4f5" />
+
 </p>
 
 Confirmed the brief's warning was well-founded — this password was neither `123456` nor `password`, but still fell to the same built-in dictionary: **`!@#$%^&`**.
 
 <p align="center">
-  <img src="./evidence/images/12-pdf3-report-thompson.png" width="420" alt="Decrypted pathology report for Emily Thompson">
+<img width="484" height="702" alt="image9 3_pdf3" src="https://github.com/user-attachments/assets/85e32b92-3799-4128-9d6e-e3b8511d6a33" />
+
 </p>
 
 | File | Patient | Password | Attempts |
