@@ -286,3 +286,22 @@ mediroza-pentest-report/
 ---
 
 **Status:** Milestones 1–3 complete and documented above. Milestone 4 (full formal pentest report) is the final deliverable for this engagement.
+
+👨‍🏫 Mentor
+
+Waqas Karim (CCIE)
+
+Thank you for the technical guidance and practical learning opportunity throughout the internship.
+
+👤 Author
+
+Rabi Chaudhary
+
+Cybersecurity Professional B082
+
+LinkedIn: 
+
+📌 Project Information
+
+Program Name: Cybersecurity at Networkwalks | Week: 04 | Project: Penetration Testing Project {Mediroza General Hospital}| Repository: GitHub
+
