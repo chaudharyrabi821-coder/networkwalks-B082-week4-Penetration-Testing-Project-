@@ -73,7 +73,8 @@ Reconnaissance → Mapping → Analysis → Exploitation → Data Recovery → R
 **Step 1 — Command-line reconnaissance.** Before opening a browser, `curl` was used to fingerprint the stack with minimal footprint:
 
 <p align="center">
-  
+  <img width="1252" height="202" alt="image" src="https://github.com/user-attachments/assets/8f372ddc-0b95-4c03-a1db-c2f45c33d29d" />
+
 </p>
 
 `robots.txt` was checked next — and it handed over far more than expected, explicitly disallowing `/patient/`, `/staff/`, and `/old/`:
